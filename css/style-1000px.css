@@ -54,11 +54,11 @@
 /* Tweet                                                                         */
 /*********************************************************************************/
 	
-	#tweet
+	#findMe
 	{
 	}
 
-	#tweet blockquote
+	#findMe blockquote
 	{
 		font-size: 1.6em;
 	}	

@@ -57,8 +57,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\font-awesome.css" />
-    <Content Include="css\font-awesome.min.css" />
     <Content Include="css\font\asafeplacetofall-webfont.svg" />
     <Content Include="css\font\droidsansmono-webfont.svg" />
     <Content Include="css\font\fontawesome-webfont.svg" />

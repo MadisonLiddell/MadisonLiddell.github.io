@@ -248,14 +248,14 @@
 /* Tweet                                                                         */
 /*********************************************************************************/
 	
-	#tweet
+	#findMe
 	{
 		padding: 3em 0em 1em 0em;
 		background-position: center center;
 		background-attachment: scroll;
 	}
 
-	#tweet blockquote
+	#findMe blockquote
 	{
 		margin: 0;
 		padding: 1em 1em;
