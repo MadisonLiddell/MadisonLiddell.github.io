@@ -756,6 +756,12 @@
 		position: relative;
 		background: #fff;
 	}
+
+    #resume .difFont
+    {
+        font-family: 'droid_sans_monoregular';
+        color: #067047;
+    }
 	
 	#resume h3
 	{
@@ -845,13 +851,13 @@
 		padding: 1.20em 0em;
 		/*border-top: 1px solid;
 		border-color: rgba(255,255,255,.05);*/
-		color: #555555;
+		color: #ddd;
 	}
 	
 	#copyright a
 	{
 		text-decoration: none;
-		color:  rgba(255,255,255,.4);
+		color: #bbb;
 	}
 	
 
@@ -863,18 +869,48 @@
 	{
 		position: relative;
 		background: #f2f2f2;
-        text-align: center;
+        text-align: left;
 	}
 
-    #about p 
+     #about img
+     {
+         position: relative;
+         bottom: 100px;
+         max-width:100%;
+         max-height:100%;
+     }
+
+    #about p
     {
-		text-align: left;
+        margin-bottom: 2em;
+    }
+
+    #about i
+    {
+		/*padding-left: 1em;*/
+        font-size: 1.5em;
+    }
+
+    #about .interests
+    {
+
+        padding-left: 2em;
+    }
+
+    #about strong
+    {
+        color: #7D1616;
     }
 
     #about h2
     {
-        text-align: left;
         font-family: 'droid_sans_monoregular';
+    }
+
+    #about h3
+    {
+        font-family: 'droid_sans_monoregular';
+		font-size: 2.25em;
     }
 
 	#about .pennant
@@ -897,8 +933,7 @@
     {
 		text-align: left;
         line-height: 200%;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
+        word-wrap: normal;
     }
 
     #projects h2
@@ -962,16 +997,6 @@
 		    margin: 35px 0px;
             font-family:a_safe_place_to_fallregular;
         }
-		/*#tweet:before
-		{
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(64,64,64,0.5);
-		}*/
 	
 		#findMe section
 		{
@@ -980,6 +1005,45 @@
 			border-color: rgba(255,255,255,.1);
             margin-bottom:25px;
 		}	
+
+        #findMe ul
+	    {
+		    padding: 0 0 25px 0;
+		    list-style: none;
+		    cursor: default;
+            font-size: 1.5em;
+	    }
+	
+	    #findMe ul li
+	    {
+		    display: inline-block;
+		    margin: 0 1em;
+	    }
+	
+	    #findMe ul li span
+	    {
+		    display: none;
+		    margin: 0;
+		    padding: 0;
+	    }
+	
+	    #findMe ul li a
+	    {
+		    color: inherit;
+		    font-size: 1.75em;
+		    display: inline-block;
+		    -moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+		    -webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+		    -o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+		    -ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+		    transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+	    }
+	
+	    #findMe ul li a:hover
+	    {
+		    color: #7D1616;
+            text-decoration: none;
+	    }
 
 /*********************************************************************************/
 /* See-through window                                                                         */
