@@ -37,7 +37,7 @@
 	{
 		margin: 0;
 		padding: 0;
-		background: #161616;
+		/*background: #161616;*/
 	}
 
 	body,input,textarea,select
@@ -151,6 +151,35 @@
 	{
 		color: #bbb;
 	}
+
+    /* Custom design emphasis for programming aspects */
+
+    .language
+    {
+        font-size: 0.80em;
+        border-radius: 0.25em;
+        border: 1px solid #F8922B;
+        padding: 5px;  
+        margin: 10px 4px 10px;
+    }
+
+    .api
+    {
+        font-size: 0.80em;
+        border-radius: 0.25em;
+        border: 1px solid #E2C338;
+        padding: 5px;
+        margin: 10px 4px 10px;
+    }
+
+    .functional
+    {
+        font-size: 0.80em;
+        border-radius: 0.25em;
+        border: 1px solid #88ECCB;
+        padding: 5px;
+        margin: 10px 4px 10px;
+    }
 
 	/* Sections/Articles */
 	
@@ -304,26 +333,21 @@
 		font-size: 1.2em;
 		font-weight: 300;
 		color: #FFF !important;
-		-moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-		-webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-		-o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-		-ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-		transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
 		text-align: center;
-		border-radius: 0.25em;
+		'border-radius: 0.25em;
 	}
 
-	.button:hover
+	/*.button:hover
 	{
 		background: #F8922B;
 		color: #FFF !important;
-	}
+	}*/
 
 /*********************************************************************************/
 /* Social Icon Styles                                                            */
 /*********************************************************************************/
 
-	ul.link
+	/*ul.link
 	{
 		padding: 0 0 25px 0;
 		list-style: none;
@@ -360,7 +384,7 @@
 	{
 		color: #7D1616;
         text-decoration: none;
-	}
+	}*/
 
 /*********************************************************************************/
 /* Header                                                                        */
@@ -424,18 +448,10 @@
 			text-decoration: none;
 			font-weight: 300;
 			line-height: 1em;
-			/*font-size: 7em;*/
 			color: #FFF;
 			letter-spacing: -0.05em;
-			margin: 0 0 0.125em 0;
-
-            
+			margin: 0 0 0.125em 0;      
 		}
-
-        #logo a:hover
-        {
-
-        }
 		
 		#logo span
 		{
@@ -736,19 +752,9 @@
 	{
 		text-align: center;
 	}
-	
-	/*.homepage #content header h2
-	{
-	}
-
-	#main h3
-	{
-		display: block;
-		padding-bottom: 0.50em;
-	}*/
 
 /*********************************************************************************/
-/* resume                                                                          */
+/* Resume                                                                        */
 /*********************************************************************************/
 
 	#resume
@@ -782,6 +788,40 @@
         margin-bottom:0em;
     }
 
+    #resume small
+    {
+        font-size: 0.90em;
+        'text-align: center;
+    }
+
+    #resume ul.skills
+    {
+        margin: 0;
+		padding: 0em 0em 1.5em 0em;
+        text-align: left;
+    }
+            #resume ul.skills li
+			{
+				padding: 0.50em 0.5em;
+				font-size: 0.95em;
+				border-top: none;
+                /*border-bottom: 1px solid;*/
+                /*line-height: 200%;*/
+			}	
+            
+            #resume ul.skills li.title
+            {
+                text-align: center;
+				border-top: none;
+                /*border-bottom: 2px solid;*/
+				/*border-color: #7D1616;*/
+            }		
+
+             #resume ul.skills li:last-child
+             {
+                 border: none;
+             }
+
     #resume ul.work
     {
         margin: 0;
@@ -792,10 +832,6 @@
 			{
 				padding: 0.50em 0.5em;
 				font-size: 0.95em;
-				border-top: 1px solid;
-                border-bottom: 1px solid;
-				border-color: rgba(0,0,0,.1);
-
 			}		
 		
 			#resume ul.work li:first-child
@@ -803,9 +839,28 @@
 				padding-top: 0;
 				border-top: none;
 			}
-	
-			#resume ul.work {
-			}
+
+            
+    #resume .language
+    {
+       font-size: 1em;
+       margin: 0px;
+       line-height: 200%;
+    }
+
+    #resume .api
+    {
+       font-size: 1em;
+       margin: 0px;
+       line-height: 200%;
+    }
+
+    #resume .functional
+    {
+       font-size: 1em;
+       margin: 0px;
+       line-height: 200%;
+    }
 
     #resume div.row
     {
@@ -849,8 +904,6 @@
 	#copyright .container
 	{
 		padding: 1.20em 0em;
-		/*border-top: 1px solid;
-		border-color: rgba(255,255,255,.05);*/
 		color: #ddd;
 	}
 	
@@ -862,7 +915,7 @@
 	
 
 /*********************************************************************************/
-/* About                                                                    */
+/* About                                                                         */
 /*********************************************************************************/
 
  #about
@@ -887,7 +940,6 @@
 
     #about i
     {
-		/*padding-left: 1em;*/
         font-size: 1.5em;
     }
 
@@ -957,24 +1009,7 @@
 	{
 		margin-top: 1.5em;
 	}
-
-    #projects .language
-    {
-        font-size: 0.80em;
-        border-radius: 0.25em;
-        border: 1px solid #F8922B;
-        padding: 5px;  
-        margin: 10px 4px 10px;
-    }
-
-    #projects .api
-    {
-        font-size: 0.80em;
-        border-radius: 0.25em;
-        border: 1px solid #E2C338;
-        padding: 5px;
-        margin: 10px 4px 10px;
-    }
+    
 
 /*********************************************************************************/
 /* findMe                                                                         */
@@ -1046,7 +1081,7 @@
 	    }
 
 /*********************************************************************************/
-/* See-through window                                                                         */
+/* See-through window, shows background                                          */
 /*********************************************************************************/
 	
 	.window
@@ -1069,7 +1104,7 @@
 			background: rgba(64,64,64,0.5);
 		}
 	
-		.window section h2
+		.window h2
 		{
 			border-top: 1px solid;
 			border-bottom: 1px solid;
@@ -1085,8 +1120,8 @@
 		}
 
 /**********************************************************************************/
-/*                                                             */
-/*********************************************************************************/
+/* Helper for aligning left or right                                              */
+/**********************************************************************************/
 .right
 {
     float: right;
