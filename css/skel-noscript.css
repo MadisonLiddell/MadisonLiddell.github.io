@@ -15,11 +15,11 @@
 /* Container */
 
 	body {
-		min-width: 1200px;
+		/*min-width: 1200px;*/
 	}
 
 	.container {
-		width: 1200px;
+		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -63,6 +63,7 @@
 		.\-3u { margin-left: 25% }
 		.\-2u { margin-left: 16.6666666667% }
 		.\-1u { margin-left: 8.3333333333% }
+
 
 		.row > * {
 			padding: 50px 0 0 50px;

@@ -10,6 +10,7 @@
 
 	body
 	{
+        max-width:960px;
 	}
 
 	body,input,textarea,select
@@ -80,7 +81,6 @@
 	
 	#about
 	{
-		padding: 6em 0em;
 	}
 	
 	#about h3
@@ -105,7 +105,6 @@
 	
 	#projects
 	{
-		padding: 6em 0em;
 	}
 	
 	#projects h3
@@ -131,7 +130,6 @@
 	
 	#resume
 	{
-		padding: 6em 0em;
 	}
 	
 	#resume h3
@@ -158,7 +156,7 @@
 	
 	#findMe
 	{
-		padding: 6em 0em 3em 0em;
+		padding: 6em 0em 1em 0em;
 	}
 
 	#findMe blockquote

@@ -24,8 +24,8 @@
 	{
 		line-height: 1em;
 		font-size: 1.5em;
-        margin-top: 2em;
-        margin-bottom: 2em;
+        margin-top: 1em;
+        margin-bottom: 1em;
 	}
 
 	section,
@@ -54,8 +54,8 @@
 
 	hr
 	{
-		margin: 3em 0 0 0;
-		padding: 3em 0 0 0;
+		margin: 1em 0em;
+        padding: 1em 0em;
 	}
 
 	header
@@ -102,6 +102,8 @@
 			line-height: 44px;
 			font-weight: 300;
 			text-decoration: none;
+            font-family: 'a_safe_place_to_fallregular';
+            font-size: 30px;
 		}
 		
 		#titleBar .tag
@@ -153,6 +155,11 @@
 			padding: 0 1em 0 1em;
 			letter-spacing: 1px;
 		}
+
+            #navPanel .link:hover
+            {
+                background:#7D1616;
+            }
 		
 			#navPanel .link:first-child
 			{
@@ -243,18 +250,23 @@
 	}
 
 /*********************************************************************************/
-/* About                                                                      */
+/* About                                                                         */
 /*********************************************************************************/
 	
 	#about
 	{
-		padding: 4em 0em 3em 0em;
+		padding: 1em;
 	}
 
 	#about h2
 	{
 		font-size: 2em;
 	}
+
+    #about img
+    {
+        bottom: 0;
+    }
 
 /*********************************************************************************/
 /* Projects                                                                      */
@@ -272,23 +284,37 @@
 	}
 
 /*********************************************************************************/
-/* Resume                                                                      */
+/* Resume                                                                        */
 /*********************************************************************************/
 	
 	#resume
 	{
-		padding: 4em 0em 3em 0em;
+		padding: 1em;
 	}
 
 	#resume h3
 	{
-		font-size: 2em;
+		font-size: 2em; 
+        padding-top:0;
 	}
 
     #resume ul.work
     {
         padding-left: 2.5em;
     }
+
+    #resume ul.skills
+    {
+        padding: 0em 0em 0em 1.5em;
+    }
+
+    #resume section 
+    {
+        margin: 0em;
+    }
+    
+    /** achievements */
+    .achievements .\35 u { width: 100%; }
 
 /*********************************************************************************/
 /* Welcome                                                                       */
@@ -315,7 +341,13 @@
 		margin: 0;
 		padding: 1em 1em;
 		font-size: 1.2em;
-	}		
+	}
+    
+    #findMe ul li 
+    {
+        margin: 0 1em 1em 0em;
+        display:block;
+    }		
 
 /*********************************************************************************/
 /* findMe                                                                         */
@@ -324,4 +356,9 @@
 #copyright
 {
     background: #888;
+}
+
+#copyright .container
+{
+    padding: 0.75em 0;
 }

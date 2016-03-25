@@ -343,48 +343,6 @@
 		color: #FFF !important;
 	}*/
 
-/*********************************************************************************/
-/* Social Icon Styles                                                            */
-/*********************************************************************************/
-
-	/*ul.link
-	{
-		padding: 0 0 25px 0;
-		list-style: none;
-		cursor: default;
-        font-size: 1.5em;
-	}
-	
-	ul.link li
-	{
-		display: inline-block;
-		margin: 0 1em;
-	}
-	
-	ul.link li span
-	{
-		display: none;
-		margin: 0;
-		padding: 0;
-	}
-	
-	ul.link li a
-	{
-		color: inherit;
-		font-size: 1.75em;
-		display: inline-block;
-		-moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-		-webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-		-o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-		-ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-		transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-	}
-	
-	ul.link li a:hover
-	{
-		color: #7D1616;
-        text-decoration: none;
-	}*/
 
 /*********************************************************************************/
 /* Header                                                                        */
@@ -418,21 +376,15 @@
 	{
 		position: relative;
 		z-index: 1;
-        -webkit-animation: bounce 800ms ease-out;
+        /*-webkit-animation: bounce 800ms ease-out;
 	    -moz-animation: bounce 800ms ease-out;
 	    -o-animation: bounce 800ms ease-out;
-	    animation: bounce 800ms ease-out;
-       
+	    animation: bounce 800ms ease-out;*/
 	}
         #logo:hover
         {
-             font-size: 1.4em;
-            -moz-transition: font-size 1.0s ease-in-out, font-size 1.0s ease-in-out;
-		    -webkit-transition: font-size 1.0s ease-in-out, font-size 1.0s ease-in-out;
-		    -o-transition: font-size 1.0s ease-in-out, font-size 1.0s ease-in-out;
-		    -ms-transition: font-size 1.0s ease-in-out, font-size 1.0s ease-in-out;
-		    transition: font-size 1.0s ease-in-out, font-size 1.0s ease-in-out;
-       
+            font-size: 1.4em;
+            transition: font-size 1.0s ease-in-out;
         }
 	
 		#logo h1
@@ -450,7 +402,8 @@
 			line-height: 1em;
 			color: #FFF;
 			letter-spacing: -0.05em;
-			margin: 0 0 0.125em 0;      
+			margin: 0 0 0.125em 0;    
+            text-shadow: 0px 0px 20px #777;
 		}
 		
 		#logo span
@@ -698,6 +651,7 @@
 			display: inline-block;
 			border-right: 1px solid;
 			border-color: rgba(255,255,255,.1);
+            margin-right: -5px;
 		}
 		
 			#nav > ul > li:last-child
@@ -720,12 +674,15 @@
 			}
             #nav > ul > li > a:hover
             {
-                -moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-		        -webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-		        -o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-		        -ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+                -moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, box-shadow .35s ease-in-out, border-radius .35s ease-in-out;
+		        -webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, box-shadow .35s ease-in-out, border-radius .35s ease-in-out;
+		        -o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, box-shadow .35s ease-in-out, border-radius .35s ease-in-out;
+		        -ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, box-shadow .35s ease-in-out, border-radius .35s ease-in-out;
 		        transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-                color: #555555;
+                color: white;
+                transition: color 0.35s ease-in-out, background-color .35s ease-in-out, box-shadow .35s ease-in-out, border-radius .35s ease-in-out;
+                background: rgba(255,255,255,.3);
+                box-shadow: 0 0px 20px rgba(255,255,255,.5);
             }
 
 			#nav li.active a
@@ -760,7 +717,8 @@
 	#resume
 	{
 		position: relative;
-		background: #fff;
+        background: #f2f2f2;
+        padding:4em 4em;
 	}
 
     #resume .difFont
@@ -787,11 +745,19 @@
     {
         margin-bottom:0em;
     }
+        #resume section:nth-child(1) h3
+        {
+            padding-top:0;
+        }
 
     #resume small
     {
         font-size: 0.90em;
         'text-align: center;
+    }
+
+    #resume .skillset:hover header 
+    {
     }
 
     #resume ul.skills
@@ -800,6 +766,13 @@
 		padding: 0em 0em 1.5em 0em;
         text-align: left;
     }
+            #resume ul.skills:hover
+            {
+                background: #e6e6e6;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px;
+            }
+
             #resume ul.skills li
 			{
 				padding: 0.50em 0.5em;
@@ -813,6 +786,7 @@
             {
                 text-align: center;
 				border-top: none;
+                font-size:1.25em;
                 /*border-bottom: 2px solid;*/
 				/*border-color: #7D1616;*/
             }		
@@ -836,9 +810,18 @@
 		
 			#resume ul.work li:first-child
 			{
-				padding-top: 0;
 				border-top: none;
 			}
+
+    #resume .achievements li, .education li
+    {
+        width:100%;
+    }
+
+    .workExperience p
+    {
+        margin-bottom:0;
+    }
 
             
     #resume .language
@@ -923,14 +906,17 @@
 		position: relative;
 		background: #f2f2f2;
         text-align: left;
+        padding:4em 4em;
+        box-shadow: 0px 0px 10px white;
 	}
 
      #about img
      {
          position: relative;
-         bottom: 100px;
          max-width:100%;
          max-height:100%;
+         box-shadow: 0px 0px 20px #777;
+         border: 10px solid white;
      }
 
     #about p
@@ -979,11 +965,12 @@
 		position: relative;
 		background: #f2f2f2;
         text-align: center;
+        padding:4em 4em;
 	}
 
     #projects p 
     {
-		text-align: left;
+		text-align: center;
         line-height: 200%;
         word-wrap: normal;
     }
@@ -1009,7 +996,41 @@
 	{
 		margin-top: 1.5em;
 	}
+
+    #projects .row
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        /*#projects .row:nth-child(2) section
+        {
+            min-height:520px;
+        }*/
+
+    #projects .\34 u
+    {
+        min-height:480px;
+        /*margin-left: 50px;*/
+        position: relative;
+        /*padding-left: 0px;*/
+    }
     
+    #projects section
+    {
+        width:33%;
+    }
+        #projects section .container 
+        {
+            padding:10px;
+        }
+
+        #projects section .container:hover
+        {
+            background:#E6E6E6 !important;
+            color:inherit;
+            border-radius:5px;
+        }
 
 /*********************************************************************************/
 /* findMe                                                                         */
@@ -1130,4 +1151,20 @@
 .left
 {
     float: left;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    text-decoration: none;
+    color: #000000;
+    background: rgba(0,0,0,.4);
+    font-size: 12px;
+    display: none;
+    border-radius:5px;
+}
+
+.back-to-top:hover {    
+    background-color: rgba(135, 135, 135, 0.50);
 }

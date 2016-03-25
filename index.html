@@ -12,9 +12,8 @@
     <meta name="description" content="Personal Website" />
     <meta name="keywords" content="madison liddell" />
     <meta name="author" content="Madison Liddell" />
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery-2.2.1.min.js"></script>
     <script src="js/skel.min.js"></script>
     <script src="js/skel-panels.min.js"></script>
     <script src="js/init.js"></script>
@@ -28,6 +27,25 @@
     <link href="favicon.ico" rel="icon" type="image/ico" />
 </head>
 <body class="homepage">
+    <script>
+        jQuery(document).ready(function () {
+            var offset = 220;
+            var duration = 500;
+            jQuery(window).scroll(function () {
+                if (jQuery(this).scrollTop() > offset) {
+                    jQuery('.back-to-top').fadeIn(duration);
+                } else {
+                    jQuery('.back-to-top').fadeOut(duration);
+                }
+            });
+
+            jQuery('.back-to-top').click(function (event) {
+                event.preventDefault();
+                jQuery('html, body').animate({ scrollTop: 0 }, duration);
+                return false;
+            })
+        });
+    </script>
 
     <!-- Header -->
     <div id="header">
@@ -44,7 +62,7 @@
         <div class="container">
 
             <!-- Logo -->
-            <div id="logo">
+            <div id="logo" class="hvr-bob">
                 <h1><a href="index.html">Madison Liddell</a></h1>
                 <span class="tag"><strong>Software engineer</strong> in training</span>
             </div>
@@ -75,7 +93,7 @@
                     </p>
                 </section>
                 <section class="5u">
-                    <img src="images/profile2015.png" />
+                    <img src="images/profile2016.jpg" />
                 </section>
             </div>
         </div>
@@ -90,57 +108,68 @@
         <div class="container">
             <div class="row">
                 <!-- Projects | RealFake Estates -->
-                <section class="4u">
-                    <span class="pennant"><span class="fa fa-building-o"></span></span>
-                    <h3>RealFake Estates</h3>
-                    <p>Experimental project using .Net MVC 4 that works like an online tool to find "property" listings and contact options for "agents".<br /><br />
-                    <span class="language">C#</span><span class="language">ASPX</span><span class="language">HTML</span><span class="language">CSS</span><span class="language">MySQL</span><br /><span class="api">Asp.Net</span><span class="api">MVC 4</span><span class="api">Bootstrap</span>
-                    </p>
-                    <a href="https://github.com/MadisonLiddell/FakeRealEstateWebsite" class="hvr-bounce-to-right button ">Source code</a>
+                <section class="">
+                    <div class="container hvr-grow hvr-fade hvr-glow">
+                        <span class="pennant"><span class="fa fa-building-o"></span></span>
+                        <h3>RealFake Estates</h3>
+                        <p>
+                            Experimental project using .Net MVC 4 that works like an online tool to find "property" listings and contact options for "agents".<br /><br />
+                            <span class="language">C#</span><span class="language">ASPX</span><span class="language">HTML</span><span class="language">CSS</span><span class="language">MySQL</span><br /><span class="api">Asp.Net</span><span class="api">MVC 4</span><span class="api">Bootstrap</span>
+                        </p>
+                        <a href="https://github.com/MadisonLiddell/FakeRealEstateWebsite" class="hvr-bounce-to-right button ">Source code</a>
+                    </div>
                 </section>
                 <!-- Projects | Database Forms -->
-                <section class="4u">
-                    <span class="pennant"><span class="fa fa-database"></span></span>
-                    <h3>Database Forms</h3>
-                    <p>Designed and implemented an object oriented application that functions as a database entry form and can display custom query results.
-                    <br /><br />
-                    <span class="language">Java</span><span class="language">MySQL</span><span class="api">Swing</span>
-                    </p>
-                    <a href="https://github.com/MadisonLiddell/DatabaseForms" class="button hvr-bounce-to-top">Source code</a>
+                <section class="">
+                    <div class="container hvr-grow hvr-fade hvr-glow">
+                        <span class="pennant"><span class="fa fa-database"></span></span>
+                        <h3>Database Forms</h3>
+                        <p>
+                            <br /><br />
+                            <span class="language">Java</span><span class="language">MySQL</span><span class="api">Swing</span>
+                        </p>
+                        <a href="https://github.com/MadisonLiddell/DatabaseForms" class="button hvr-bounce-to-top">Source code</a>
+                    </div>
                 </section>
                 <!-- Projects | BounceBox  -->
-                <section class="4u">
-                    <span class="pennant"><span class="fa fa-cube"></span></span>
-                    <h3>BounceBox</h3>
-                    <p>Designed and developed a 3D scene contaning a cube and sphere with a realistic bounce physics algorithm.
-                    <br /><br />
-                    <span class="language">C++</span><span class="language">GLSL</span><span class="api">OpenGL</span>
-                    </p>
-                    <a href="https://github.com/MadisonLiddell/BounceBox" class="button hvr-bounce-to-left">Source code</a>
+                <section class="">
+                    <div class="container hvr-grow hvr-fade hvr-glow">
+                        <span class="pennant"><span class="fa fa-cube"></span></span>
+                        <h3>BounceBox</h3>
+                        <p>
+                            Designed and developed a 3D scene contaning a cube and sphere with a realistic bounce physics algorithm.
+                            <br /><br />
+                            <span class="language">C++</span><span class="language">GLSL</span><span class="api">OpenGL</span>
+                        </p>
+                        <a href="https://github.com/MadisonLiddell/BounceBox" class="button hvr-bounce-to-left">Source code</a>
+                    </div>
                 </section>
             </div>
             <div class="row">
                 <!-- Projects | SimpleDirections  -->
-                <section class="4u">
-                    <span class="pennant"><span class="fa fa-map-marker"></span></span>
-                    <h3>SimpleDirections</h3>
-                    <p>
-                        Designed and developed Android app utilizing Google Maps API to download driving directions and display route using polylines on a map.
-                        <br /><br />
-                        <span class="language">Java</span><span class="api">Android</span><span class="api">Google Maps v2</span>
-                    </p>
-                    <a href="https://github.com/MadisonLiddell/SimpleDirections" class="button hvr-bounce-to-right">Source code</a>
+                <section class="">
+                    <div class="container hvr-grow hvr-fade hvr-glow">
+                        <span class="pennant"><span class="fa fa-map-marker"></span></span>
+                        <h3>SimpleDirections</h3>
+                        <p>
+                            Designed and developed Android app utilizing Google Maps API to download driving directions and display route using polylines on a map.
+                            <br /><br />
+                            <span class="language">Java</span><span class="api">Android</span><span class="api">Google Maps v2</span>
+                        </p>
+                        <a href="https://github.com/MadisonLiddell/SimpleDirections" class="button hvr-bounce-to-right">Source code</a>
+                    </div>
                 </section>
                 <!-- Projects | IsThatEdible  -->
-                <section class="4u">
-                    <span class="pennant"><span class="fa fa-cutlery"></span></span>
-                    <h3>Is That Edible?</h3>
-                    <p>
-                        Designed and developed (still under development) Android app that is used to track a food's expiration date and notify a user who has an expired item when near a grocery store or other chosen location.
-                        <br /><br />
-                        <span class="language">Java</span><span class="api">Android</span><span class="api">Google Play Location Geofences</span>
-                    </p>
-                    <a href="https://github.com/MadisonLiddell/IsThatEdible" class="button hvr-bounce-to-top">Source code</a>
+                <section class="">
+                    <div class="container hvr-grow hvr-fade hvr-glow">
+                        <span class="pennant"><span class="fa fa-cutlery"></span></span>
+                        <h3>Is That Edible?</h3>
+                        <p>
+                            <br /><br />
+                            <span class="language">Java</span><span class="api">Android</span><span class="api">Google Play Location Geofences</span>
+                        </p>
+                        <a href="https://github.com/MadisonLiddell/IsThatEdible" class="button hvr-bounce-to-top">Source code</a>
+                    </div>
                 </section>
             </div>
         </div>
@@ -154,7 +183,7 @@
     <div id="resume">
         <div class="container">
             <!-- Resume | Education -->
-            <section>
+            <section class="education">
                 <header>
                     <h3>Education</h3>
                 </header>
@@ -167,24 +196,24 @@
                     <div class="row">
                         <section class="4u">
                             <ul class="default">
-                                <li>Foundations of Software Design</li>
-                                <li>Operating Systems Design</li>
-                                <li>Web Application Architecture and Design</li>
+                                <li class="hvr-underline-from-left">Foundations of Software Design</li>
+                                <li class="hvr-underline-from-left">Operating Systems Design</li>
+                                <li class="hvr-underline-from-left">Web Application Architecture and Design</li>
                                     
                             </ul>
                         </section>
                         <section class="4u">
                             <ul class="default">
-                                <li>Database Systems Design</li>
-                                <li>Advanced Mobile Application Development</li>
-                                <li>Discrete Structures for Computer Science</li>
+                                <li class="hvr-underline-from-center">Database Systems Design</li>
+                                <li class="hvr-underline-from-center">Advanced Mobile Application Development</li>
+                                <li class="hvr-underline-from-center">Discrete Structures for Computer Science</li>
                             </ul>
                         </section>
                         <section class="4u">
                             <ul class="default">
-                                <li>Object Oriented Programming</li>
-                                <li>Programming II</li>
-                                <li>Java I</li>
+                                <li class="hvr-underline-from-right">Object Oriented Programming</li>
+                                <li class="hvr-underline-from-right">Programming II</li>
+                                <li class="hvr-underline-from-right">Java I</li>
                             </ul>
                         </section>
                     </div>
@@ -192,28 +221,24 @@
             </section>
             <hr />
             <!-- Resume | Skills -->
-            <section>
+            <section class="skillset">
                 <header>
                     <h3>Skillset</h3>
-                    <!--<br />-->
-                    <!--<small>(Hover over items for details)</small>-->
                 </header>
                 <p>
                     <div class="row">
                         <!-- Resume | Skills | Languages -->
                         <section class="4u">
-                            <ul class="skills">
+                            <ul class="skills hvr-glow hvr-fade">
                                 <li class="title"><strong>Languages</strong></li>
-                                <li><span class="language">C++</span><br />
-                                    <small>Experienced tutoring in advanced topics: object oriented concepts, game development</small></li>
-                                <li><span class="language">C#</span><br />
-                                    <small>Experienced tutoring in advanced topics: object oriented concepts</small></li>
+                                <li><span class="language">C++ & C#</span><br />
+                                    <small>Tutored in advanced topics, programmed basic games, and experimented with different frameworks </small></li>
                                 <li><span class="language">Java</span><br />
-                                    <small>Experienced tutoring in advanced topics: polymorphism, mobile development</small></li>
+                                    <small>Tutored in advanced topics, implemented application using database interactions, experience from Android</small></li>
                                 <li><span class="language">HTML + CSS</span><br />
-                                    <small>Self-taught in and practiced since high school, adhering to W3C standards</small></li>
-                                <li><span class="language">Javascript</span><br />
-                                    <small>Basic experience passing data from client-server, retrieving database content, and utilization with CSS</small></li>
+                                    <small>Developed mobile responsive sites for SJ Consulting</small></li>
+                                <li><span class="language">Javascript & JQuery</span><br />
+                                    <small>Devised custom scripts for sites, utilized for improving and fixing website functionality</small></li>
                                 <li><span class="language">SQL</span><br />
                                     <small>Utilized with relational databases, integration with websites, mobile applications, and desktop applications</small></li>
                                 <li><span class="language">VBA</span><br />
@@ -222,45 +247,42 @@
                         </section>
                         <!-- Resume | Skills | Technologies -->
                         <section class="4u">
-                            <ul class="skills">
+                            <ul class="skills hvr-glow hvr-fade">
                                 <li class="title"><strong>Technologies</strong></li>
                                 <li><span class="api">Microsoft Visual Studio</span><br />
                                     <small>Preferred IDE, also huge fan of IntelliJ IDEA</small></li>
                                 <li><span class="api">Microsoft Office Suite</span><br />
-                                    <small>Advanced experience in all applications</small></li>
+                                    <small>If you're not a fan of Excel, you're missing out</small></li>
                                 <li><span class="api">Git &amp; Github</span><br />
-                                    <small>Hosts projects on GitHub, practiced using Git</small></li>
+                                    <small>Managed projects on GitHub, competent with Git</small></li>
                                 <li><span class="api">.NET</span><br />
                                     <small>Developed website utilizing ASP.NET MVC 4</small></li>
                                 <li><span class="api">OpenGL</span><br />
-                                    <small>Developed basic animated 3-D scene utilizing latest practices for MVP matrices and shaders</small></li>
-                                <li><span class="api">Android L</span><br />
+                                    <small>Developed basic animated 3-D scene utilizing latest practices for graphics processing MVP matrices and shaders</small></li>
+                                <li><span class="api">Android</span><br />
                                     <small>Developed several apps: driving directions, todo-list, location based treasure hunt game, and several apps utilizing basic Android functionality like fragments, state-saving, services, and UI features</small></li>
                             </ul>
                         </section>
                         <!-- Resume | Skills | Functional -->
                         <section class="4u">
-                            <ul class="skills">
+                            <ul class="skills hvr-glow hvr-fade">
                                 <li class="title">
                                     <strong>Functional</strong></li>
                                 <li>
-                                    <span class="functional">Independent Learning</span><br />
-                                    <small>Self-taught in new languages, environments, and APIs; self-taught C++ and HTML from age 12, regularly practice/experiment with new technologies</small></li>
+                                    <span class="functional">Independent Learner</span><br />
+                                    <small>Self-taught in new languages, environments, and APIs; self-taught C++ and HTML from age 12, regularly practice/experiment with new technologies. Passion for learning!</small></li>
                                 <li>
-                                    <span class="functional">Communication</span><br />
-                                    <small>Led effective verbal sessions with tutees at technical and non-technical levels; studied and practiced at Rasmussen Leadership Academy</small></li>
+                                    <span class="functional">Communicator</span><br />
+                                    <small>Led effective verbal sessions with tutees at technical and non-technical levels, studied and practiced at Rasmussen Leadership Academy</small></li>
                                 <li>
-                                    <span class="functional">Problem Solving</span><br />
-                                    <small>Utilized and also taught as a skill while tutoring</small></li>
+                                    <span class="functional">Problem Solver</span><br />
+                                    <small>Proficient at problem solving not just my own issues but fellow students/programmers as well, ample experience from habit of experimenting with new technologies or ideas</small></li>
                                 <li>
-                                    <span class="functional">Software Documentation &amp; Modeling</span><br />
-                                    <small>Created UML diagrams for software projects; modeled program logic and members with flowcharts</small></li>
+                                    <span class="functional">Critical Thinker</span><br />
+                                    <small>Mentored students in this concept, </small></li>
                                 <li>
-                                    <span class="functional">Critical Thinking</span><br />
-                                    <small>Mentored students in concept; planned, tested, and debugged projects using new languages and frameworks</small></li>
-                                <li>
-                                    <span class="functional">Version Control</span><br />
-                                    <small>Utilized Git and Microsoft TFS for project documentation and personal side projects</small></li>
+                                    <span class="functional">Organized</span><br />
+                                    <small>Utilized version control for personal projects, strongly support and advise commenting code, and have maintained a small arsenal of selected coding snippets in the spirit of writing resusable code</small></li>
                             </ul>
                         </section>
                     </div>
@@ -269,22 +291,38 @@
             <br />
             <hr />
             <!-- Resume | Work Experience -->
-            <section>
-                <!-- Resume | Work Experience | Tutor -->
+            <section class="workExperience">
+                <!-- Resume | Work Experience | Web Dev -->
                 <header>
                     <h3>Work Experience</h3>
                 </header>
                 <p>
-                    <strong>Technology Tutor</strong>
-                    <span class="right"><i>April 2014 - Current</i></span><br />
-                    <strong>Rasmussen College</strong>
+                    <strong>Web Developer</strong>
+                    <span class="right"><i>January 2016 - Current</i></span><br />
+                    <strong><a href="http://www.sjconsulting.us/">SJ Consulting</a></strong>
                     <br />
                     <div class="row">
                         <section class="9u">
                             <ul class="work">
-                                <li>Assessed basic software development problems and facilitated implementation of solutions </li>
-                                <li>Guided tutees through critical thinking exercises and developed their problem solving skills</li>
-                                <li>Completed 250+ live hours with tutees</li>
+                                <li class="hvr-icon-pop">Developed mobile-responsive sites in BlackBaud NetCommunity</li>
+                                <li class="hvr-icon-pop">Wrote scripts to solve unique problems while adhering to client requirements</li>
+                                <li class="hvr-icon-pop">Produced results under short time restraints and learned new platforms quickly to keep up with work load</li>
+                            </ul>
+                        </section>
+                    </div>
+                </p>
+                <!-- Resume | Work Experience | Tutor -->
+                <p>
+                    <strong>Technology Tutor</strong>
+                    <span class="right"><i>April 2014 - Current</i></span><br />
+                    <strong><a href="http://www.rasmussen.edu/">Rasmussen College</a></strong>
+                    <br />
+                    <div class="row">
+                        <section class="9u">
+                            <ul class="work">
+                                <li class="hvr-icon-pop">Assessed basic software development problems and facilitated implementation of solutions </li>
+                                <li class="hvr-icon-pop">Guided tutees through critical thinking exercises and developed their problem solving skills</li>
+                                <li class="hvr-icon-pop">Completed 270+ live hours with tutees</li>
                             </ul>
                         </section>
                     </div>  
@@ -292,7 +330,7 @@
             </section>
             <!-- Resume | Achievements  -->
             <hr />
-            <section>
+            <section class="achievements">
                 <header>
                     <h3>Achievements</h3>
                 </header>
@@ -300,9 +338,10 @@
                     <div class="row">
                         <section class="5u">
                             <ul class="default">
-                                <li>Dean's List 8/9 quarters and counting </li>
-                                <li><a href="http://guides.rasmussen.edu/RLA">Rasmussen Leadership Academy</a> Alumni</li>
-                                <li><a href="http://www.crla.net/"> CRLA Certified</a> Tutor</li>
+                                <li class="hvr-underline-from-center">Dean's List 9/10 quarters and counting </li>
+                                <li class="hvr-underline-from-center"><a href="http://guides.rasmussen.edu/RLA">Rasmussen Leadership Academy</a> Alumni</li>
+                                <li class="hvr-underline-from-center"><a href="http://www.crla.net/"> CRLA Certified</a> Tutor</li>
+                                <li class="hvr-underline-from-center">Contributed resources and content to the Rasmussen <a href="http://guides.rasmussen.edu/c.php?g=137486&p=1595900">School of Technology guide</a></li>
                             </ul>
                         </section>
                     </div>
@@ -319,9 +358,10 @@
                     <h2>Also find me on...</h2>
                 </header>
                 <ul>
-                    <li><a href="https://github.com/MadisonLiddell" class="hvr-float-shadow">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/madisonliddell" class="hvr-float-shadow">LinkedIn</a></li>
-                    <li><a href="https://profiles.looksharp.com/1417990-madison-liddell" class="hvr-float-shadow">Looksharp</a></li>
+                    <li class="hvr-float-shadow hvr-bob"><a href="https://github.com/MadisonLiddell">GitHub</a></li>
+                    <li class="hvr-float-shadow hvr-bob"><a href="https://plus.google.com/u/0/118063672167290204315">Google+</a></li>
+                    <li class="hvr-float-shadow hvr-bob"><a href="https://www.linkedin.com/in/madisonliddell">LinkedIn</a></li>
+                    <li class="hvr-float-shadow hvr-bob"><a href="https://profiles.looksharp.com/1417990-madison-liddell">Looksharp</a></li>
                 </ul>
             </section>
         </div>
@@ -330,8 +370,10 @@
     <!-- Copyright -->
     <div id="copyright">
         <div class="container">
-            &copy; Madison Liddell | <a href="http://templated.co/linear">Modified Design</a>
+            &copy; Madison Liddell | <a href="https://templated.co/linear">Modified Design</a>
         </div>
+        <div class="back-to-top"><div class="hvr-icon-up">    </div></div>
     </div>
 </body>
 </html>
+
