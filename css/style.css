@@ -807,6 +807,7 @@
 			{
 				padding: 0.50em 0.5em;
 				font-size: 0.95em;
+				display:block;
 			}		
 		
 			#resume ul.work li:first-child
