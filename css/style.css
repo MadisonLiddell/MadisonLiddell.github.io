@@ -380,6 +380,7 @@
 	    -moz-animation: bounce 800ms ease-out;
 	    -o-animation: bounce 800ms ease-out;
 	    animation: bounce 800ms ease-out;*/
+		transition: font-size 1.0s ease-in-out;
 	}
         #logo:hover
         {
