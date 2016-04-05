@@ -264,13 +264,13 @@
 		ul.default
 		{
 			margin: 0;
-			padding: 0em 0em 1.5em 0em;
+			padding: 0em 0em 1.5em 1em;
 			list-style: none;
 		}
 		
 			ul.default li
 			{
-				padding: 0.50em 0.5em;
+				padding: 0.50em 0em;
 				font-size: 0.95em;
 				border-top: 1px solid;
 				border-color: rgba(0,0,0,.1);
@@ -775,11 +775,9 @@
 
             #resume ul.skills li
 			{
-				padding: 0.50em 0.5em;
+				padding: 0.50em 1em;
 				font-size: 0.95em;
 				border-top: none;
-                /*border-bottom: 1px solid;*/
-                /*line-height: 200%;*/
 			}	
             
             #resume ul.skills li.title
@@ -799,12 +797,12 @@
     #resume ul.work
     {
         margin: 0;
-		padding: 0em 0em 1.5em 0em;
+		padding: 0em 0em 1em 1em;
         list-style:circle;
     }
             #resume ul.work li
 			{
-				padding: 0.50em 0.5em;
+				padding: 0.5em 0em;
 				font-size: 0.95em;
 				display:block;
 			}		
@@ -844,11 +842,6 @@
        font-size: 1em;
        margin: 0px;
        line-height: 200%;
-    }
-
-    #resume div.row
-    {
-        margin-left: -30px;
     }
 
 
@@ -932,8 +925,7 @@
 
     #about .interests
     {
-
-        padding-left: 2em;
+        padding-left: 1em;
     }
 
     #about strong
@@ -1137,7 +1129,7 @@
 			margin: 0;
 		    font-weight: 300;
             font-size: 3.25em;
-			color: rgba(255,255,255,.6);
+			color: rgba(255,255,255,1);
             display: block;
 		}
 
