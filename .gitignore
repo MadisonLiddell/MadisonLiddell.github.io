@@ -198,3 +198,4 @@ FakesAssemblies/
 *.opt
 *.config
 *.csproj
+*.sln

@@ -74,7 +74,15 @@
     #projects section 
     {
         width:50%;
+        min-height:460px;
     }
+        #projects .row > section:nth-child(3)
+        {
+            padding-top: 50px !important;
+            margin: 0px auto;
+            float: none;
+            clear: both;
+        }
     
 /*********************************************************************************/
 /* Resume                                                                        */
