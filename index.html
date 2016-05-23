@@ -14,10 +14,15 @@
     <meta name="author" content="Madison Liddell" />
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <script src="js/jquery-2.2.1.min.js"></script>
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/skel.min.js"></script>
     <script src="js/skel-panels.min.js"></script>
-    <script src="js/init.js"></script>
+    <script src="js/init.js"></script> 
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
     <link href="css/hover.css" rel="stylesheet" media="all">
     <noscript>
         <link rel="stylesheet" href="css/skel-noscript.css" />
@@ -29,11 +34,11 @@
 </head>
 <body class="homepage">
     <script>
-        jQuery(document).ready(function () {
+        jQuery(document).ready(function() {
             // Floating Back to Top Button
             var offset = 220;
             var duration = 500;
-            jQuery(window).scroll(function () {
+            jQuery(window).scroll(function() {
                 if (jQuery(this).scrollTop() > offset) {
                     jQuery('.back-to-top').fadeIn(duration);
                 } else {
@@ -41,11 +46,18 @@
                 }
             });
 
-            jQuery('.back-to-top').click(function (event) {
+            jQuery('.back-to-top').click(function(event) {
                 event.preventDefault();
                 jQuery('html, body').animate({ scrollTop: 0 }, duration);
                 return false;
             })
+
+            // Attach fancyBox
+            jQuery(".fancybox").fancybox({
+                type: 'iframe',
+                padding: 0,
+                width: '600px'
+            });
         });
     </script>
 
@@ -174,6 +186,18 @@
                         </p>
                         <a href="https://github.com/MadisonLiddell/IsThatEdible" class="button hvr-bounce-to-top">Source code</a>
                     </div>
+                </section> 
+                <!-- Projects | HTML Email Templates  -->
+                <section class="">
+                    <div class="container hvr-grow hvr-fade hvr-glow">
+                        <span class="pennant"><span class="fa fa-envelope"></span></span>
+                        <h3>HTML Email Templates</h3>
+                        <p>Created mobile responsive HTML email templates for the tutors of Rasmussen College. They are designed to work on any email client or browser and are currently in active use.
+                            <br /><br />
+                            <span class="language">HTML</span><span class="language">CSS</span>
+                        </p>
+                        <a href="templates/DetailedConfirm.html" class="button hvr-bounce-to-top fancybox" data-fancybox-type="iframe">Demo</a>
+                    </div>
                 </section>
             </div>
         </div>
@@ -210,7 +234,7 @@
                             <ul class="default">
                                 <li class="hvr-underline-from-center">Database Systems Design</li>
                                 <li class="hvr-underline-from-center">Advanced Mobile Application Development</li>
-                                <li class="hvr-underline-from-center">Discrete Structures for Computer Science</li>
+                                <li class="hvr-underline-from-center">Applied Discrete Mathematics</li>
                             </ul>
                         </section>
                         <section class="4u">
@@ -326,7 +350,7 @@
                             <ul class="work">
                                 <li class="hvr-icon-pop">Assessed basic software development problems and facilitated implementation of solutions </li>
                                 <li class="hvr-icon-pop">Guided tutees through critical thinking exercises and developed their problem solving skills</li>
-                                <li class="hvr-icon-pop">Completed 270+ live hours with tutees</li>
+                                <li class="hvr-icon-pop">Completed 280+ live hours with tutees</li>
                             </ul>
                         </section>
                     </div>  
