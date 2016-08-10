@@ -29,6 +29,17 @@
 
 }
 
+@font-face {
+    font-family: 'TheConstellationofHeracles';
+    src: url('font/TheConstellationofHeracles.eot');
+    src: url('font/TheConstellationofHeracles.eot?#iefix') format('embedded-opentype'),
+         url('font/TheConstellationofHeracles.woff2') format('woff2'),
+         url('font/TheConstellationofHeracles.woff') format('woff'),
+         url('font/TheConstellationofHeracles.ttf') format('truetype'),
+         url('font/TheConstellationofHeracles.svg#TheConstellationofHeraclesregular') format('svg');
+
+}
+
 /*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
@@ -391,7 +402,8 @@
 		#logo h1
 		{
 			color: #FFF;
-            font-family:'a_safe_place_to_fallregular';
+            /*font-family:'a_safe_place_to_fallregular';*/
+		    font-family: 'TheConstellationofHeracles';
             font-size: 9em;
 		}
 	
@@ -400,17 +412,19 @@
 			display: block;
 			text-decoration: none;
 			font-weight: 300;
+		    font-size: 2em;
 			line-height: 1em;
 			color: #FFF;
-			letter-spacing: -0.05em;
-			margin: 0 0 0.125em 0;    
+			letter-spacing: 0;
+			margin: 0 0 0 0;    
             /*text-shadow: 0px 0px 20px #777;*/
 		}
 		
 		#logo span
 		{
-			font-size: 1.4em;
-			color: #FFF;
+			font-size: 6em;
+			color: #3a3a3a;
+		    font-family: 'TheConstellationofHeracles';
 		}
 
 /* CSS Bouncer */
@@ -1044,7 +1058,9 @@
         {
             color: #FFF;
 		    margin: 35px 0px;
-            font-family:a_safe_place_to_fallregular;
+            /*font-family:a_safe_place_to_fallregular;*/
+		    font-family: 'TheConstellationofHeracles';
+            font-size: 9em;
         }
 	
 		#findMe section
@@ -1067,6 +1083,9 @@
 	    {
 		    display: inline-block;
 		    margin: 0 1em;
+            background: rgba(255, 255, 255, 0.23);
+            padding: 12px;
+            border-radius: 5px;
 	    }
 	
 	    #findMe ul li span
