@@ -111,15 +111,3 @@
 	}
 
 
-
-.hover-block:hover .hover-block-bg-content {
-	visibility: hidden;
-}
-
-.hover-block:hover .hover-block-blur {
-	opacity: 0.75;
-}
-
-.hover-block:hover .hover-block-content {
-	opacity:1;
-}
