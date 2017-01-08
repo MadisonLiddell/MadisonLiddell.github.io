@@ -660,8 +660,9 @@
 
 		#nav-wrapper
 		{
-			background: rgba(0,0,0,.1);
-			position: absolute;
+			background: rgba(0,0,0,.4);
+			position: fixed;
+			z-index:999;
 			top: 0;
 			left: 0;
 			width: 100%;

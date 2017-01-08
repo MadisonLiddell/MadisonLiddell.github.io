@@ -199,3 +199,4 @@ FakesAssemblies/
 *.config
 *.csproj
 *.sln
+.idea/workspace.xml
