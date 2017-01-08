@@ -58,6 +58,16 @@
                 padding: 0,
                 width: '600px'
             });
+
+            // Card flip
+            jQuery(".card").on({
+                mouseenter: function() {
+                    jQuery(".card").addClass("flipped");
+                },
+                mouseleave: function() {
+                    jQuery(".card").removeClass("flipped");
+                }
+            });
         });
     </script>
 
@@ -121,84 +131,112 @@
         <h2>Projects</h2>
     </div>
     <div id="projects">
+        <span class="tooltip">Hover over a project block for details</span>
         <div class="container">
             <div class="row">
                 <!-- Projects | RealFake Estates -->
                 <section class="">
-                    <div class="container hvr-grow hvr-fade hvr-glow">
-                        <span class="pennant"><span class="fa fa-building-o"></span></span>
-                        <h3>RealFake Estates</h3>
-                        <p>
-                            Experimental project using .Net MVC 4 that works like an online tool to find "property" listings and contact options for "agents".<br /><br />
-                            <span class="language">C#</span><span class="language">ASPX</span><span class="language">HTML</span><span class="language">CSS</span><span class="language">MySQL</span><br /><span class="api">Asp.Net</span><span class="api">MVC 4</span><span class="api">Bootstrap</span>
-                        </p>
-                        <a href="https://github.com/MadisonLiddell/FakeRealEstateWebsite" class="hvr-bounce-to-right button ">Source code</a>
+                    <div class="hover-block">
+                        <div class="hover-block-bg container">
+                            <div class="hover-block-bg-content">
+                                <span class="pennant"><span class="fa fa-building-o"></span></span>
+                            <h3>RealFake Estates</h3>
+
+                            </div>
+                        </div>
+                        <div class="hover-block-blur"></div>
+                        <div class="hover-block-content">
+                            <p>Experimental project using .Net MVC 4 that works like an online tool to find "property" listings and contact options for "agents".<br /><br />
+                                <span class="language">C#</span><span class="language">ASPX</span><span class="language">HTML</span><span class="language">CSS</span><span class="language">MySQL</span><br /><span class="api">Asp.Net</span><span class="api">MVC 4</span><span class="api">Bootstrap</span>
+                            </p>
+                            <a href="https://github.com/MadisonLiddell/FakeRealEstateWebsite" class="hvr-bounce-to-right button ">Source code</a>
+                        </div>
+
                     </div>
                 </section>
                 <!-- Projects | Database Forms -->
                 <section class="">
-                    <div class="container hvr-grow hvr-fade hvr-glow">
-                        <span class="pennant"><span class="fa fa-database"></span></span>
-                        <h3>Database Forms</h3>
-                        <p>
+                    <div class="hover-block">
+                        <div class="hover-block-bg container"><div class="hover-block-bg-content"><span class="pennant"><span class="fa fa-database"></span></span>
+                        <h3>Database Forms</h3></div></div>
+                        <div class="hover-block-blur"></div>
+                        <div class="hover-block-content"><p>
                             Designed and implemented an object oriented application that functions as a database entry form with a GUI and the ability to display custom query results.
                             <br /><br />
                             <span class="language">Java</span><span class="language">MySQL</span><span class="api">Swing</span>
                         </p>
-                        <a href="https://github.com/MadisonLiddell/DatabaseForms" class="button hvr-bounce-to-top">Source code</a>
+                        <a href="https://github.com/MadisonLiddell/DatabaseForms" class="button hvr-bounce-to-top">Source code</a></div>
                     </div>
                 </section>
                 <!-- Projects | BounceBox  -->
                 <section class="">
-                    <div class="container hvr-grow hvr-fade hvr-glow">
-                        <span class="pennant"><span class="fa fa-cube"></span></span>
-                        <h3>BounceBox</h3>
-                        <p>
-                            Designed and developed a 3D scene contaning a cube and sphere with a realistic bounce physics algorithm.
-                            <br /><br />
-                            <span class="language">C++</span><span class="language">GLSL</span><span class="api">OpenGL</span>
-                        </p>
-                        <a href="https://github.com/MadisonLiddell/BounceBox" class="button hvr-bounce-to-left">Source code</a>
+                    <div class="hover-block">
+                        <div class="hover-block-bg container"><div class="hover-block-bg-content">
+                            <span class="pennant"><span class="fa fa-cube"></span></span>
+                            <h3>BounceBox</h3></div></div>
+                        <div class="hover-block-blur"></div>
+                        <div class="hover-block-content">
+                            <p>
+                                Designed and developed a 3D scene contaning a cube and sphere with a realistic bounce physics algorithm.
+                                <br /><br />
+                                <span class="language">C++</span><span class="language">GLSL</span><span class="api">OpenGL</span>
+                            </p>
+                            <a href="https://github.com/MadisonLiddell/BounceBox"
+                               class="button hvr-bounce-to-left">Source code</a>
+                        </div>
                     </div>
                 </section>
-            </div>
-            <div class="row">
+          <!--  </div> -->
+          <!--  <div class="row"> -->
                 <!-- Projects | SimpleDirections  -->
                 <section class="">
-                    <div class="container hvr-grow hvr-fade hvr-glow">
-                        <span class="pennant"><span class="fa fa-map-marker"></span></span>
-                        <h3>SimpleDirections</h3>
-                        <p>
-                            Designed and developed Android app utilizing Google Maps API to download driving directions and display route using polylines on a map.
-                            <br /><br />
-                            <span class="language">Java</span><span class="api">Android</span><span class="api">Google Maps v2</span>
-                        </p>
-                        <a href="https://github.com/MadisonLiddell/SimpleDirections" class="button hvr-bounce-to-right">Source code</a>
+                    <div class="hover-block">
+                        <div class="hover-block-bg container"><div class="hover-block-bg-content">
+                            <span class="pennant"><span class="fa fa-map-marker"></span></span>
+                            <h3>SimpleDirections</h3></div></div>
+                        <div class="hover-block-blur"></div>
+                        <div class="hover-block-content">
+                            <p>
+                                Designed and developed Android app utilizing Google Maps API to download driving directions and display route using polylines on a map.
+                                <br /><br />
+                                <span class="language">Java</span><span class="api">Android</span><span class="api">Google Maps v2</span>
+                            </p>
+                            <a href="https://github.com/MadisonLiddell/SimpleDirections"
+                               class="button hvr-bounce-to-right">Source code</a>
+                        </div>
                     </div>
                 </section>
                 <!-- Projects | IsThatEdible  -->
                 <section class="">
-                    <div class="container hvr-grow hvr-fade hvr-glow">
-                        <span class="pennant"><span class="fa fa-cutlery"></span></span>
-                        <h3>Is That Edible?</h3>
-                        <p>
-                            Designed and still developing an Android app for tracking a food's expiration date. Can notify a user of an expired item when they're near a chosen location.
-                            <br /><br />
-                            <span class="language">Java</span><span class="api">Android</span><span class="api">Google Play Location Geofences</span>
-                        </p>
-                        <a href="https://github.com/MadisonLiddell/IsThatEdible" class="button hvr-bounce-to-top">Source code</a>
+                    <div class="hover-block">
+                        <div class="hover-block-bg container"><div class="hover-block-bg-content">
+                            <span class="pennant"><span class="fa fa-cutlery"></span></span>
+                            <h3>Is That Edible?</h3></div></div>
+                            <div class="hover-block-blur"></div>
+                            <div class="hover-block-content">
+                                <p>
+                                    Designed and still developing an Android app for tracking a food's expiration date. Can notify a user of an expired item when they're near a chosen location.
+                                    <br /><br />
+                                    <span class="language">Java</span><span class="api">Android</span><span class="api">Google Play Location Geofences</span>
+                                </p>
+                                <a href="https://github.com/MadisonLiddell/IsThatEdible" class="button hvr-bounce-to-top">Source code</a>
+                            </div>
                     </div>
                 </section> 
                 <!-- Projects | HTML Email Templates  -->
                 <section class="">
-                    <div class="container hvr-grow hvr-fade hvr-glow">
-                        <span class="pennant"><span class="fa fa-envelope"></span></span>
-                        <h3>HTML Email Templates</h3>
-                        <p>Created mobile responsive HTML email templates for the tutors of Rasmussen College. They are designed to work on any email client or browser and are currently in active use.
-                            <br /><br />
-                            <span class="language">HTML</span><span class="language">CSS</span>
-                        </p>
-                        <a href="templates/DetailedConfirm.html" class="button hvr-bounce-to-top fancybox" data-fancybox-type="iframe">Demo</a>
+                    <div class="hover-block">
+                        <div class="hover-block-bg container"><div class="hover-block-bg-content">
+                            <span class="pennant"><span class="fa fa-envelope"></span></span>
+                            <h3>HTML Email Templates</h3></div></div>
+                            <div class="hover-block-blur"></div>
+                            <div class="hover-block-content">
+                                <p>Created mobile responsive HTML email templates for the tutors of Rasmussen College. They are designed to work on any email client or browser and are currently in active use.
+                                <br /><br />
+                                <span class="language">HTML</span><span class="language">CSS</span>
+                                </p>
+                                <a href="templates/DetailedConfirm.html" class="button hvr-bounce-to-top fancybox" data-fancybox-type="iframe">Demo</a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -219,7 +257,7 @@
                 </header>
                 <p>
                     <strong>Computer Science, B.S. GPA: <span class="emphasize">4.00</span></strong>
-                    <span class="right"><i>Expected Graduation December 2016</i></span><br />
+                    <span class="right"><i>December 2016</i></span><br />
                     <strong>Rasmussen College </strong>
                     <br />Presented "Master Your Technology" live webinar to new students for two quarters.<br />
                     <i>Relevant Coursework</i>
@@ -274,7 +312,7 @@
                 <!-- Resume | Work Experience | Tutor -->
                 <p>
                     <strong>Computer Science Tutor</strong>
-                    <span class="right"><i>April 2014 - Current</i></span><br/>
+                    <span class="right"><i>April 2014 - December 2016</i></span><br/>
                     <strong><a href="http://www.rasmussen.edu/">Rasmussen College</a></strong>
                     <br/>
                     <div class="row">
@@ -282,7 +320,7 @@
                             <ul class="work">
                                 <li class="hvr-icon-pop">Assessed basic software development problems and facilitated implementation of solutions </li>
                                 <li class="hvr-icon-pop">Guided tutees through critical thinking exercises and developed their problem solving skills</li>
-                                <li class="hvr-icon-pop">Completed 280+ live hours with tutees</li>
+                                <li class="hvr-icon-pop">Completed 350+ live hours with tutees</li>
                             </ul>
                         </section>
                     </div>
@@ -368,7 +406,7 @@
                     <div class="row">
                         <section class="5u">
                             <ul class="default">
-                                <li class="hvr-underline-from-center">Dean's List 9/10 quarters and counting </li>
+                                <li class="hvr-underline-from-center">Dean's List for 12 quarters </li>
                                 <li class="hvr-underline-from-center"><a href="http://guides.rasmussen.edu/RLA">Rasmussen Leadership Academy</a> Alumni</li>
                                 <li class="hvr-underline-from-center"><a href="http://www.crla.net/"> CRLA Certified</a> Tutor</li>
                                 <li class="hvr-underline-from-center">Contributed resources and content to the Rasmussen <a href="http://guides.rasmussen.edu/c.php?g=137486&p=1595900">School of Technology guide</a></li>

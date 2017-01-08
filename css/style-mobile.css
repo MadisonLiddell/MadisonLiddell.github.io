@@ -284,6 +284,21 @@
 		padding: 1.5em 0em;
 		font-size: 1.4em;
 	}
+#projects section {
+	padding-bottom:20px;
+}
+#projects section:nth-child(2n+1) {
+	padding-right:0;
+}
+
+.hover-block-content {
+	opacity:1;
+	position: relative;
+}
+.hover-block-bg {
+	padding: 1em 5px 0 5px !important;
+	box-shadow:none;
+}
 
 /*********************************************************************************/
 /* Resume                                                                        */
@@ -353,14 +368,27 @@
     
     #findMe ul li 
     {
-        margin: 0 1em 1em 0em;
+        margin: 0 auto 1em auto;
         display:block;
-    }		
+		max-width: 160px;
+    }
+
+	#findMe ul li a {
+		font-size:1.15em;
+	}
+	
+	#findMe h2 {
+		display: none;
+	}
 
 /*********************************************************************************/
 /* findMe                                                                         */
 /*********************************************************************************/
-    
+
+#findMe h2 {
+	font-size:5em;
+	margin: 35px 16px;
+}
 #copyright
 {
     background: #888;
@@ -369,4 +397,15 @@
 #copyright .container
 {
     padding: 0.75em 0;
+}
+/*********************************************************************************/
+/* Window                                                                         */
+/*********************************************************************************/
+
+.window {
+	padding:3em 0;
+}
+
+.tooltip {
+	display:none;
 }

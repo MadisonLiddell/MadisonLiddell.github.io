@@ -121,7 +121,7 @@
 	#projects p
 	{
 		line-height: 2em;
-		font-size: 1.2em;
+		font-size: 1em;
 	}
 
 /*********************************************************************************/
@@ -165,4 +165,9 @@
 		padding: 1em 4em;
 		line-height: 1.5em;
 		font-size: 1.8em;
-	}	
+	}
+
+
+	#resume p, #resume ul.work {
+		margin-left: 15px;
+	}

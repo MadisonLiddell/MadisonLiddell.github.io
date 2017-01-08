@@ -74,15 +74,18 @@
     #projects section 
     {
         width:50%;
-        min-height:460px;
+        min-height:405px;
+		padding-left:25px;
     }
-        #projects .row > section:nth-child(3)
+        #projects .row > section:nth-child(2n)
         {
-            padding-top: 50px !important;
-            margin: 0px auto;
-            float: none;
-            clear: both;
+			clear:right;
         }
+
+		#projects section:nth-child(2n+1) {
+			padding-left: 0;
+			padding-right:25px;
+		}
     
 /*********************************************************************************/
 /* Resume                                                                        */
@@ -105,4 +108,18 @@
 	#findMe blockquote
 	{
 		font-size: 1.6em;
-	}	
+	}
+
+
+
+.hover-block:hover .hover-block-bg-content {
+	visibility: hidden;
+}
+
+.hover-block:hover .hover-block-blur {
+	opacity: 0.75;
+}
+
+.hover-block:hover .hover-block-content {
+	opacity:1;
+}

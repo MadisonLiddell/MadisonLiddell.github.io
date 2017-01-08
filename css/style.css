@@ -28,7 +28,6 @@
          url('font/droidsansmono-webfont.svg#droid_sans_monoregular') format('svg');
 
 }
-
 @font-face {
     font-family: 'TheConstellationofHeracles';
     src: url('font/TheConstellationofHeracles.eot');
@@ -39,6 +38,18 @@
          url('font/TheConstellationofHeracles.svg#TheConstellationofHeraclesregular') format('svg');
 
 }
+@font-face {
+	font-family: 'Taken by Vultures';
+	src: url('font/hinted-TakenbyVulturesDemo.eot');
+	src: url('font/hinted-TakenbyVulturesDemo.eot?#iefix') format('embedded-opentype'),
+	url('font/hinted-TakenbyVulturesDemo.woff2') format('woff2'),
+	url('font/hinted-TakenbyVulturesDemo.woff') format('woff'),
+	url('font/hinted-TakenbyVulturesDemo.ttf') format('truetype'),
+	url('font/hinted-TakenbyVulturesDemo.svg#TakenbyVulturesDemo') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 
 /*********************************************************************************/
 /* Basic                                                                         */
@@ -210,6 +221,10 @@
 		article:last-child
 		{
 			margin-bottom: 0;
+		}
+		.skillset section:last-child
+		{
+			clear:left;
 		}
 
 		.row > section,
@@ -391,20 +406,19 @@
 	    -moz-animation: bounce 800ms ease-out;
 	    -o-animation: bounce 800ms ease-out;
 	    animation: bounce 800ms ease-out;*/
-		transition: font-size 1.0s ease-in-out;
+		transition: font-size 0.50s ease-in-out;
 	}
         #logo:hover
         {
-            font-size: 1.4em;
-            transition: font-size 1.0s ease-in-out;
+            font-size: 1.1em;
+            transition: font-size 0.50s ease-in-out;
         }
 	
 		#logo h1
 		{
 			color: #FFF;
-            /*font-family:'a_safe_place_to_fallregular';*/
-		    font-family: 'TheConstellationofHeracles';
-            font-size: 9em;
+		    font-family: 'Taken by Vultures';
+            font-size: 15em;
 		}
 	
 		#logo a
@@ -412,7 +426,6 @@
 			display: block;
 			text-decoration: none;
 			font-weight: 300;
-		    font-size: 2em;
 			line-height: 1em;
 			color: #FFF;
 			letter-spacing: 0;
@@ -980,6 +993,7 @@
 		text-align: center;
         line-height: 200%;
         word-wrap: normal;
+		margin:20px;
     }
 
     #projects h2
@@ -1026,6 +1040,8 @@
     #projects section
     {
         width:33%;
+		position: relative;
+		perspective: 800px;
     }
         #projects section .container 
         {
@@ -1038,6 +1054,32 @@
             color:inherit;
             border-radius:5px;
         }
+
+	.card {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		transform-style: preserve-3d;
+		transition: transform 1s;
+	}
+	.card > div {
+		margin: 0;
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+	}
+	.card .card-front {
+		background: #F2F2F2;
+	}
+	.card .card-back {
+		background: #E6E6E6;
+		transform: rotateY( 180deg );
+	}
+	.card.flipped {
+		transform: rotateY( 180deg );
+	}
 
 /*********************************************************************************/
 /* findMe                                                                         */
@@ -1058,16 +1100,15 @@
         {
             color: #FFF;
 		    margin: 35px 0px;
-            /*font-family:a_safe_place_to_fallregular;*/
-		    font-family: 'TheConstellationofHeracles';
+			font-family: 'Taken by Vultures';
             font-size: 9em;
         }
 	
 		#findMe section
 		{
 			border-top: 1px solid;
-			border-bottom: 2px solid;
-			border-color: rgba(255,255,255,.1);
+			border-bottom: 1px solid;
+			border-color: rgba(255,255,255,.25);
             margin-bottom:25px;
 		}	
 
@@ -1079,14 +1120,13 @@
             font-size: 1.5em;
 	    }
 	
-	    #findMe ul li
-	    {
-		    display: inline-block;
-		    margin: 0 1em;
-            background: rgba(255, 255, 255, 0.23);
-            padding: 12px;
-            border-radius: 5px;
-	    }
+	    #findMe ul li {
+			display: inline-block;
+			margin: 0 1em;
+			background: rgba(255, 255, 255, 0.5);
+			padding: 12px;
+			border-radius: 5px;
+		}
 	
 	    #findMe ul li span
 	    {
@@ -1097,8 +1137,8 @@
 	
 	    #findMe ul li a
 	    {
-		    color: inherit;
-		    font-size: 1.75em;
+		    color: #ffffff;
+		    font-size: 1.35em;
 		    display: inline-block;
 		    -moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
 		    -webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
@@ -1184,4 +1224,57 @@
 .difFont
 {
     font-family: 'droid_sans_monoregular';
+}
+
+.hover-block {
+	position: relative;
+	overflow: hidden;
+	background: url(../images/wood.jpg) no-repeat center center;
+	background-attachment: fixed;
+	background-size: cover;
+	border-radius: 5px;
+	box-shadow: 0px 0px 4px black;
+}
+.hover-block-bg {
+	width:100%;
+	height:100%;
+	position: relative;
+	background: none;
+	border-radius: 5px;
+	box-shadow: 0px 0px 4px black;
+	padding: 100px 10px !important;
+	transition: all 0.5s ease;
+}
+
+.hover-block-bg-content h3 {
+	color: #bbb;
+}
+
+.hover-block-blur {
+	opacity:0;
+	position: absolute;
+	width:100%;
+	height:100%;
+	transition: all 0.5s ease;
+	background: rgba(64,64,64,1);
+	top:0;
+}
+
+.hover-block-content {
+	opacity:0;
+	margin-top: 30px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	transition: all 0.5s ease;
+	color: #ffffff;
+}
+
+.tooltip {
+	position: absolute;
+	top: 1em;
+	width: auto;
+	left: 0;
+	right: 0;
 }
