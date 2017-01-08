@@ -105,6 +105,7 @@
 	
 	#projects
 	{
+		padding-bottom:0;
 	}
 	
 	#projects h3
@@ -123,6 +124,25 @@
 		line-height: 2em;
 		font-size: 1em;
 	}
+
+#projects section
+{
+	width:33%;
+	min-height:405px;
+	padding-left:25px;
+}
+#projects .row > section:nth-child(3n)
+{
+	clear:right;
+}
+
+#projects section:nth-child(3n+1) {
+	padding-left: 0;
+	padding-right:25px;
+}
+#projects section:nth-child(3n+2) {
+	padding-right:25px;
+}
 
 /*********************************************************************************/
 /* Resume                                                                      */
