@@ -214,6 +214,7 @@
 		section > :last-child,
 		article > :last-child
 		{
+
 		}
 
 		section:last-child,
@@ -221,10 +222,7 @@
 		{
 			margin-bottom: 0;
 		}
-		.skillset section:last-child
-		{
-			clear:left;
-		}
+	
 
 		.row > section,
 		.row > article
