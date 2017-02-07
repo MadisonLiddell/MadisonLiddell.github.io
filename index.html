@@ -59,15 +59,14 @@
                 width: '600px'
             });
 
-            // Card flip
-            jQuery(".card").on({
-                mouseenter: function() {
-                    jQuery(".card").addClass("flipped");
-                },
-                mouseleave: function() {
-                    jQuery(".card").removeClass("flipped");
+            // Remove hover effect for mobile
+            jQuery(window).on('resize', function(){
+                var win = $(this);
+                if (win.width() <= 600) {
+                    jQuery(".title h1").removeClass("hvr-underline-from-center");
                 }
             });
+
         });
     </script>
 
@@ -86,9 +85,9 @@
         <div class="container">
 
             <!-- Logo -->
-            <div id="logo" class="hvr-bob">
-                <h1><a href="index.html">Madison Liddell</a></h1>
-                <span class="tag">Software engineer in training</span>
+            <div id="logo">
+                <h1 class="hvr-underline-from-center"><a href="index.html">Madison Liddell</a></h1>
+                <!-- <span class="tag">Software engineer in training</span> -->
             </div>
         </div>
     </div>
@@ -100,7 +99,8 @@
                 <h2>Hello world.</h2>
             </header>
             <p>
-                I am an aspiring software engineer and a recent college graduate with a Bachelor's in Computer Science.
+                I am a web developer, aspiring software engineer, and a recent college graduate with a Bachelor's in
+                Computer Science.
                 As a person who is very analytical and loves science, I find technology and computers fascinating. I feel software is one way to make a computer or device even better. </p>
             <p>
                 I hope to one day be a meaningful part of the tech evolution that is steadily taking over our world. Software can be so much more than just a computer program or mobile application, it has the potential to actually make an impact on our lives be it by changing it or maybe just improving it. <br />
@@ -114,8 +114,9 @@
                     <h3>Interests</h3>
                     <p class="interests">
                         <i class="fa fa-book"></i> <strong>Bookworm ></strong> Love fantasy, but will read any intriguing story<br />
-                        <i class="fa fa-snowflake-o"></i> <strong>Nature Lover ></strong> Novice snowboarder and
-                                                                               hiking enthusiast
+                        <i class="fa fa-snowflake-o"></i> <strong>Nature Lover ></strong> Nature easily provides the
+                                                                               best
+                                                                               adventures
                         <br />
                         <i class="fa fa-code"></i> <strong>Programmer ></strong> I simply enjoy solving real-world problems with code<br />
                         <i class="fa fa-paw"></i><strong> Animal Lover ></strong> Cats are the best, but I vehemently support all animals
@@ -429,10 +430,12 @@
                     <h2>Also find me on...</h2>
                 </header>
                 <ul>
-                    <li class="hvr-float-shadow hvr-bob"><a href="https://github.com/MadisonLiddell">GitHub</a></li>
-                    <li class="hvr-float-shadow hvr-bob"><a href="https://plus.google.com/u/0/118063672167290204315">Google+</a></li>
-                    <li class="hvr-float-shadow hvr-bob"><a href="https://www.linkedin.com/in/madisonliddell">LinkedIn</a></li>
-                    <li class="hvr-float-shadow hvr-bob"><a href="https://profiles.looksharp.com/1417990-madison-liddell">Looksharp</a></li>
+                    <li class=""><a class="fa fa-github" href="https://github.com/MadisonLiddell"></a></li>
+                    <li class=""><a class="fa fa-google-plus" href="https://plus.google.com/u/0/118063672167290204315
+                                                                   "></a></li>
+                    <li class=""><a class="fa fa-linkedin" href="https://www.linkedin.com/in/madisonliddell"></a></li>
+                    <!-- <li class=""><a href="https://profiles.looksharp
+                    .com/1417990-madison-liddell">Looksharp</a></li> -->
                 </ul>
             </section>
         </div>
@@ -448,4 +451,3 @@
     </div>
 </body>
 </html>
-

@@ -222,7 +222,7 @@
 		{
 			margin-bottom: 0;
 		}
-	
+
 
 		.row > section,
 		.row > article
@@ -402,13 +402,17 @@
         /*-webkit-animation: bounce 800ms ease-out;
 	    -moz-animation: bounce 800ms ease-out;
 	    -o-animation: bounce 800ms ease-out;
-	    animation: bounce 800ms ease-out;*/
-		transition: font-size 0.50s ease-in-out;
+	    animation: bounce 800ms ease-out;
+		transition: font-size 0.50s ease-in-out;*/
 	}
+		#logo .hvr-underline-from-center:before {
+			background:#000;
+			bottom:120px;
+		}
         #logo:hover
         {
-            font-size: 1.1em;
-            transition: font-size 0.50s ease-in-out;
+            /*font-size: 1.1em;*/
+            /*transition: font-size 0.50s ease-in-out;*/
         }
 	
 		#logo h1
@@ -416,6 +420,8 @@
 			color: #FFF;
 		    font-family: 'Taken by Vultures';
             font-size: 15em;
+			height:325px;
+			padding: 35px 55px 0 35px;
 		}
 	
 		#logo a
@@ -911,7 +917,6 @@
 	
 	#copyright a
 	{
-		text-decoration: none;
 		color: #bbb;
 	}
 	
@@ -965,7 +970,7 @@
 
     #about h3
     {
-        font-family: 'droid_sans_monoregular';
+
 		font-size: 2.25em;
     }
 
@@ -1100,30 +1105,28 @@
 		    margin: 35px 0px;
 			font-family: 'Taken by Vultures';
             font-size: 9em;
+			line-height:1em;
         }
 	
 		#findMe section
 		{
-			border-top: 1px solid;
-			border-bottom: 1px solid;
+
 			border-color: rgba(255,255,255,.25);
-            margin-bottom:25px;
 		}	
 
         #findMe ul
 	    {
-		    padding: 0 0 25px 0;
 		    list-style: none;
 		    cursor: default;
             font-size: 1.5em;
+			padding: 0;
+			margin: 0;
 	    }
 	
 	    #findMe ul li {
 			display: inline-block;
-			margin: 0 1em;
-			background: rgba(255, 255, 255, 0.5);
-			padding: 12px;
-			border-radius: 5px;
+			margin: 0 1em .5em;
+			border-radius: 0px;
 		}
 	
 	    #findMe ul li span
@@ -1136,19 +1139,25 @@
 	    #findMe ul li a
 	    {
 		    color: #ffffff;
-		    font-size: 1.35em;
+		    font-size: 2.25em;
 		    display: inline-block;
-		    -moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-		    -webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-		    -o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-		    -ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-		    transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+		    -moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+		    -webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+		    -o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+		    -ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+		    transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+			width: 90px;
+			height: 90px;
+			vertical-align: middle;
+			display: table-cell;
 	    }
 	
 	    #findMe ul li a:hover
 	    {
 		    color: #7D1616;
             text-decoration: none;
+			box-shadow: 0 0px 20px rgba(255,255,255,.5);
+			background: rgba(255, 255, 255, 0.5);
 	    }
 
 /*********************************************************************************/
@@ -1212,7 +1221,7 @@
     background: rgba(0,0,0,.4);
     font-size: 12px;
     display: none;
-    border-radius:5px;
+    border-radius:0px;
 }
 
 .back-to-top:hover {    

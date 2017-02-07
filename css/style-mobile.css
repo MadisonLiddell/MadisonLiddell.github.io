@@ -364,31 +364,31 @@
 		margin: 0;
 		padding: 1em 1em;
 		font-size: 1.2em;
+		margin-bottom: 0 !important;
 	}
     
     #findMe ul li 
     {
         margin: 0 auto 1em auto;
-        display:block;
-		max-width: 160px;
     }
 
 	#findMe ul li a {
 		font-size:1.15em;
+		height: 60px;
+		width: 60px;
 	}
-	
 	#findMe h2 {
-		display: none;
+		font-size:5em;
+		margin:0;
+	}
+	#findMe header {
+		margin:0;
 	}
 
 /*********************************************************************************/
-/* findMe                                                                         */
+/* copyright                                                                         */
 /*********************************************************************************/
 
-#findMe h2 {
-	font-size:5em;
-	margin: 35px 16px;
-}
 #copyright
 {
     background: #888;
