@@ -1286,3 +1286,14 @@
 	left: 0;
 	right: 0;
 }
+
+/* Social Icons */
+.fa-github:hover {
+	color:#6e5494 !important;
+}
+.fa-google-plus:hover {
+	color:#D34836 !important;
+}
+.fa-linkedin:hover {
+	color:#0077B5 !important;
+}
